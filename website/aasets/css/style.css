@@ -17,11 +17,18 @@ section
 .section{
     padding: 30px 15px;
 }
+.section.section-secondary{
+    background: #efefef;
+}
 .section-headline{
     text-align: center;
     font-size: 40px;
     font-weight: bold;
     margin: 0 0 40px;
+    transition: transform .2s;
+}
+.section-headline:hover{
+    transform: scale(2);
 }
 
 /*
@@ -62,4 +69,57 @@ overview image
 .overview-headline {
     margin: 0 0 20px;
     font-size: 30px;
+}
+
+
+.grid {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item{
+    list-style: none;
+}
+
+.grid-col-2 > .grid-item {
+    width: 50%;
+}
+
+.grid-col-3 > .grid-item {
+    width: 33.3%;
+}
+
+.grid-col-4 > .grid-item {
+    width: 25%;
+}
+
+.bio {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.bio-headline {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 20px;
+    transition: transform .2s;
+}
+.bio-headline:hover{
+    transform: scale(2);
+}
+
+.bio-img {
+    margin: 0 0 20px;
+    transition: transform .2s;
+}
+.bio-img:hover{
+    transform: scale(1.25)
+}
+
+.bio-description{
+    margin: 50px;
+    text-align: center;
 }
