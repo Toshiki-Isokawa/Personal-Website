@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+/* 
+Base Style
+*/
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: 333;
+}
+
+/*
+section 
+*/
+.section{
+    padding: 30px 15px;
+}
+.section.section-secondary{
+    background: #efefef;
+}
+.section-headline{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 40px;
+    transition: transform .2s;
+}
+.section-headline:hover{
+    transform: scale(2);
+}
+
+/*
+Hero
+*/
+.hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero > strong {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: white;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.hero > video {
+    z-index: 1;
+    position: absolute;
+    width: auto;
+    height: 105%;
+}
+
+
+/*
+overview
+*/
+.overview {
+    margin: 0;
+    display: flex;
+}
+
+/*
+overview image
+*/
+.overview-image{
+    width: 600px;
+    height: 400px;
+    --b: 10px; /* the border thickness*/
+    --g: 5px; /* the gap on hover */
+    --c: black; 
+
+    padding: calc(var(--g) + var(--b));
+    --_g: no-repeat linear-gradient(var(--c) 0 0);
+    background: 
+        var(--_g) var(--_i, 0%) 0,
+        var(--_g) 100% var(--_i, 0%),
+        var(--_g) calc(100% - var(--_i, 0%)) 100%,
+        var(--_g) 0 calc(100% - var(--_i, 0%));
+    background-size: var(--_i, 0%) var(--b),var(--b) var(--_i, 0%);
+    transition: .4s, background-position 0s;
+    cursor: pointer;
+    border-radius: 10%;
+    overflow: hidden;
+}
+.overview-image:hover{
+    --_i: 100%;
+}
+.overview-caption {
+    padding-left: 15px;
+}
+.overview-headline {
+    margin: 0 0 20px;
+    font-size: 30px;
+}
+
+
+.grid {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item{
+    list-style: none;
+}
+
+.grid-col-2 > .grid-item {
+    width: 50%;
+}
+
+.grid-col-3 > .grid-item {
+    width: 33.3%;
+}
+
+.grid-col-4 > .grid-item {
+    width: 25%;
+}
+
+.grid-col-5 > .grid-item {
+    width: 20%;
+}
+
+.bio {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.bio-headline {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 20px;
+    transition: transform .2s;
+}
+.bio-headline:hover{
+    transform: scale(2);
+}
+
+.bio-img {
+    margin: 0 0 20px;
+    transition: transform .2s;
+}
+.bio-img:hover{
+    transform: scale(1.25)
+}
+
+.bio-description{
+    margin: 25px;
+    text-align: left;
+    font-size: 25px;
+}
+
+
+
+.card-link{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: background-color .25s;
+    text-align: center;
+}
+.card-link:hover{
+    background-color: #eee;
+}
+
+.card-image{
+    width: 75%;
+}
+
+.card-description{
+    padding: 0;
+}
+
+.footer {
+    background-color: #333;
+    height: 50px;
+}
+
+.footer-description {
+    color: white;
+    text-align: center;
+}
