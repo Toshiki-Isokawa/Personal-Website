@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 /* 
 Base Style
 */
@@ -109,6 +110,12 @@ Hero
     z-index: 2;
 }
 
+@media screen and (max-width: 768px) {
+    .hero > strong {
+        font-size: 50px;
+    }
+}
+
 /*
 overview
 */
@@ -151,6 +158,20 @@ overview image
     font-size: 30px;
 }
 
+@media screen and (max-width: 768px) {
+    .overview {
+        display: block;
+    }
+    .overview-image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .overview-headline {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
 
 .grid {
     display: flex;
@@ -179,6 +200,21 @@ overview image
 .grid-col-5 > .grid-item {
     width: 20%;
 }
+
+
+@media screen and (max-width: 768px) {
+    .grid{
+        display: block;
+    }
+    .grid-col-2 > .grid-item,
+    .grid-col-3 > .grid-item,
+    .grid-col-4 > .grid-item,
+    .grid-col-5 > .grid-item {
+        width: 100%;
+        margin: 20px 0;
+     }
+}
+
 
 .bio {
     text-align: center;
@@ -209,6 +245,12 @@ overview image
     font-size: 25px;
 }
 
+@media screen and (max-width: 768px) {
+    .bio-description {
+        font-size: 15px;
+    }
+}
+
 
 
 .card-link{
@@ -231,6 +273,15 @@ overview image
     padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+    .card-image {
+        width: 40%;
+        height: auto;
+    }
+    .card-description {
+        font-size: 30px;
+    }
+}
 .footer {
     background-color: #333;
     height: 50px;
